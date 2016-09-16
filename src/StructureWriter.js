@@ -45,6 +45,14 @@ export class StructureWriter {
         }
       }
 
+      if(this.styleguide.config.gitRepo) {
+        try {
+          layoutContext.gitRepo = this.styleguide.config.gitRepo
+        } catch (e) {
+          // do nothing
+        }
+      }
+
       if (this.styleguide.config.dependencies) {
         try {
           layoutContext.cssDeps = this.styleguide.config.dependencies.styles

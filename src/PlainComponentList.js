@@ -46,7 +46,8 @@ export class PlainComponentList {
       docs: component.docs.map(d => {
         return { 'label': d.name, 'content': d.compiled }
       }),
-      component: component
+      component: component,
+      path: component.path.slice(this.styleguide.config['cwd'].length)
     }
   }
 
